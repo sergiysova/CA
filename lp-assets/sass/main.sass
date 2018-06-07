@@ -1,0 +1,450 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+.hamburger
+  display: none
+  position: relative
+  z-index: 30
+  &:active, &:focus
+    outline: none
+
+  .hamburger.is-active
+    z-index: 21
+  .hamburger-inner
+    background: $white
+    &:after, &:before
+      background: $white
+
+
+.yellowButton
+
+  background: rgb(247,148,29)
+  color: $white
+  text-transform: uppercase
+  font-weight: 700
+  font-size: 26px
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  height: 50px
+  border: none
+
+  cursor: pointer
+
+.hoverScale
+  transition: transform 0.3s
+  &:hover
+    transform: scale(1.1)
+    color: $white
+    text-decoration: none
+
+
+
+.h2
+  text-transform: uppercase
+  font-weight: 700
+  font-size: 48px
+  color: $white
+  text-align: center
+  line-height: 1
+
+.h3
+
+  font-family:  $Abl
+  font-size: 36px
+  color: $white
+  text-align: center
+  line-height: 1
+  font-weight: 400
+
+.subtitle
+  font-family: $Abl
+  font-weight: 500
+  color: rgb(4,108,143)
+  font-size: 34px
+  padding-left: 50px
+  line-height: 1.25
+
+.text
+  font-family: $Ppns
+  font-weight: 300
+  font-size: 22px
+  color: rgb(79,79,79)
+  padding-left: 40px
+  line-height: 1.25
+  margin-bottom: 0
+
+.form
+  display: flex
+
+
+  .email
+    height: 50px
+    width: 70%
+    border: none
+    border-radius: 16px
+    padding-left: 30px
+    text-transform: uppercase
+    background: rgb(236,236,236)
+
+    &::placeholder
+      text-transform: uppercase
+
+  .yellowButton
+    width: 35%
+    margin-left: -5%
+    transition: 0.3s
+
+    &:hover
+      width: 42%
+
+
+
+
+
+.headNav
+
+  margin: 0 auto
+  height: 80px
+  display: flex
+  align-content: center
+  justify-content: space-between
+  z-index: 20
+
+  .leftHeader
+    align-self: center
+    padding-top: 4px
+
+    .logo
+      display: inline-block
+      margin-right: 20px
+      img
+        width: 150px
+        height: auto
+
+
+  .rightHeader
+    align-self: center
+    nav
+      ul
+        display: flex
+        align-items: center
+        margin-bottom: 0
+        padding-left: 0
+        li
+          margin-right: 15px
+          margin-left: 15px
+          list-style: none
+
+          a
+            color: $black
+            font-size: 13px
+            text-transform: uppercase
+            font-family: $Abl
+            display: block
+            transition: 0.5s
+            border-bottom: 2px solid transparent
+            font-size: 20px
+
+            &:hover
+              text-decoration: none
+              color: $accent
+
+
+.companiesFLuid
+  background: rgb(238,238,238)
+  padding-top: 20px
+  padding-bottom: 20px
+  .companiesContainer
+    .companiesList
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      align-items: center
+      padding-left: 0
+      margin-bottom: 0
+
+      li
+        list-style: none
+        text-align: center
+        margin: 0 20px
+
+      a
+
+
+      img
+        height: 22px
+        margin: 0 auto
+
+.topSection
+  background: rgb(247, 247, 247) url("../img/Top/topBgAll.png") no-repeat center top
+  background-size: cover
+  min-height: 1200px
+
+.NYFluid
+  background-size: cover
+  min-height: 550px
+  .topSearch
+    margin-top: 80px
+  .keyWord
+    border-radius: 0
+    color: black
+    font-weight: 700
+    font-size: 16px
+    text-transform: none
+    width: 75%
+
+    &::placeholder
+      color: rgb(179,179,179)
+      text-transform: none
+
+  .topSubmit
+    border-radius: 0
+    width: 25%
+    margin-left: 0
+    transition: 0.3s
+    &:hover
+      width: 30%
+
+  .NYContainer
+    .h2
+      margin-top: 80px
+
+    .h3
+      margin-top: 20px
+
+.adviseFluid
+  padding-top: 200px
+  padding-bottom: 120px
+  position: relative
+
+  .adviseContainer
+    .h2
+      color: rgb(79,79,79)
+      text-align: left
+      max-width: 500px
+      padding-left: 50px
+    .subtitle
+      padding-left: 0
+      margin-top: 50px
+
+    .text
+      padding-left: 0
+      width: 108%
+
+.quoteFluid
+  padding-top: 150px
+  padding-bottom: 250px
+  background: url("../img/qoute/quoteBg.png") no-repeat center
+  background-size: cover
+  .quoteContainer
+    blockquote
+      font-family: $Ppns
+      font-weight: 700
+      font-size: 54px
+      color: $white
+      position: relative
+      margin: 0 80px
+      z-index: 1
+      &:before
+        content: '“'
+        font-size: 287px
+        position: absolute
+        color: rgba(178,178,178,0.6)
+        top: -160px
+        left: -120px
+        z-index: -1
+
+      footer
+        text-align: right
+        cite
+          font-family: $Abl
+          font-weight: 400
+          color: rgb(251,147,52)
+          text-align: right
+          margin-right: 100px
+          font-style: normal
+
+
+.servisesFluid
+  padding-top: 80px
+  padding-bottom: 70px
+  position: relative
+  .servisesContainer
+    .servises
+      padding-right: 50px
+    .h2
+      color: rgb(79,79,79)
+      text-align: left
+
+    .subtitle
+      padding-left: 0px
+
+    .text
+      padding-left: 0px
+      padding-right: 70px
+
+    .btnWrap
+      text-align: right
+
+    .yellowButton
+      display: inline-block
+      text-align: right
+      padding: 10px 20px
+      line-height: 1
+
+  .rightImgWrap
+    position: absolute
+    right: -120px
+    top: -80px
+    width: 40%
+    z-index: 2
+
+
+.aboutFluid
+  padding-top: 30px
+  padding-bottom: 80px
+  background: rgb(247,247,247)
+  .aboutContainer
+
+    article
+      background: $white
+      padding: 65px 50px
+      position: relative
+      z-index: 1
+      box-shadow: 0 4px 0px 0 rgba(0,0,0,0.15)
+    .h2
+      color: rgb(79,79,79)
+      text-align: center
+      margin-bottom: 20px
+
+    .subtitle
+      font-size: 24px
+      text-align: center
+      padding-left: 35px
+      padding-right: 35px
+
+
+    .btnWrap
+      text-align: center
+      margin-top: 50px
+
+    .text
+      padding-left: 0
+
+
+    .yellowButton
+      padding: 10px 20px
+
+
+.joinFluid
+  background: url("../img/Join/joinBg.png") no-repeat center top
+  background-size: cover
+  padding-top: 150px
+  padding-bottom: 150px
+  .joinContainer
+
+    .btnWrap
+      text-align: center
+    .yellowButton
+      font-size: 40px
+      padding: 0px 30px
+      height: auto
+      margin: auto
+
+    .cityList
+      display: flex
+      margin: auto
+      justify-content: space-around
+      align-items: center
+      margin-top: 50px
+      width: 80%
+      flex-wrap: wrap
+      padding-left: 0
+
+      li
+        list-style: none
+        margin: 0 10px
+        .city
+          color: $white
+          font-weight: 700
+          font-size: 24px
+          text-transform: uppercase
+          border-bottom: 2px solid transparent
+          transition: 0.3s
+
+          &:hover
+            text-decoration: none
+            border-color: $white
+
+
+.footerFluid
+
+  padding-top: 100px
+  padding-bottom: 30px
+
+
+  .footerLinks
+    margin-top: 70px
+
+
+
+    .logo
+
+    li
+      list-style: none
+
+      a
+        font-family: $Abl
+        font-weight: 500
+        color: rgb(31,31,31)
+        font-size: 24px
+        border-bottom: 2px solid transparent
+        transition: border 0.3s
+        text-transform: uppercase
+        &:hover
+          text-decoration: none
+          color: $accent
+
+
+
+
+@import "media"
+// Always at the end
+
+
